@@ -12,8 +12,10 @@ This code takes *samtools mpileup format* (generated from a BAM) and extracts pe
 ## What can I use this code for? 
 * It was written for the **RNA modifications in cDNA sequencing data** coming from Illumina RNAseq
 * It can be used also for the analysis of **nanopore cDNA sequencing data**, and will be specially useful if using the CUSTOM protocol (first-strand only), because RT drop-offs will appear 
-* It can also be used for the analysis of **direct RNA sequencing data**, however the RT drop-off info will be more irrelevant in direct RNA sequencing dat. , except for detection of transcript isoforms). 
+* It can also be used for the analysis of **direct RNA sequencing data**, however please consider checking EpiNano in that case, as 5mer information is not given as output here, whereas EpiNano will give you that.
+* You might find this code useful to use the RT drop-off to predict isoforms from dRNAseq data, based on where you observe a big drop of coverage along your transcripts (not tested)
 
+## Dependencies
 Uses third-party code (e.g. pileup2base) to extract some of its features 
 
 ## Whats the difference between mpileup2stats and HAMR?
