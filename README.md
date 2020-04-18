@@ -43,6 +43,8 @@ So: mismatch signatures depend BOTH on RT enzyme and RNA modification. Take that
 ## When to use EpiNano or this code?
 This code is better suited for the analysis of RNA modifications in cDNA datasets, where the per-read information is more irrelevant. Also, this code provides information both on mismatches as well as on RT drop-offs. 
 
+If you are analyzing direct RNA nanopore sequencing data, EpiNano typically be a better choice. 
+
 ## Disclaimers
 I believe that if it has a part of the gene without coverage, it may fail. 
 Please let me know if this is the case (Eva)
