@@ -46,7 +46,7 @@ cat $i.mpileup.digit | awk {'print $5'} | awk -F "^" '{print NF-1}' >> $i.mpileu
 cat $i.mpileup.digit | awk {'print $5'} | awk -F "-" '{print NF-1}'  > $i.mpileup.digit.del
 cat $i.mpileup.digit | awk {'print $5'} | awk -F "+" '{print NF-1}'  > $i.mpileup.digit.ins
 sed '$ d' $i.mpileup.digit.rtstop.tmp > $i.mpileup.digit.rtstop # remove last line as we pushed everything 1
-echo -ne "rtstop\tins\tdel\n" > $i.3moreinfo
+echo -ne "rtstop\tdel\tins\n" > $i.3moreinfo
 paste $i.mpileup.digit.rtstop $i.mpileup.digit.del $i.mpileup.digit.ins >> $i.3moreinfo
 
 ###############################
