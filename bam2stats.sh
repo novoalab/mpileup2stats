@@ -62,7 +62,8 @@ echo -ne "chr\tpos\tref_nuc\tA\tT\tC\tG\n" > $i.mismatches
  awk 'BEGIN{print "sum" > "kk"}NR>0{print $1+$5"\t"$2+$6"\t"$3+$7"\t"$4+$8}' $i.mismatches.tmp2 > $i.mismatches.tmp4
 paste $i.mismatches.tmp3 $i.mismatches.tmp4 >> $i.mismatches
 rm $i.mismatches.tmp $i.mismatches.tmp2 $i.mismatches.tmp3 $i.mismatches.tmp4 kk
- 
+
+
 ###############################
 ## PART 5: INDELS
 ###############################
@@ -83,7 +84,7 @@ cut -f 4-9 $i.mismatch_and_indels > $i.mismatch_and_indels.clean
 paste $i.info $i.mismatch_and_indels.clean $i.mean_median_quals $i.3moreinfo > $i.STATS	
 
 # Remove temporary files
-rm $i.info $i.mean_median_quals $i.3moreinfo $i.mpileup.digit.rtstop $i.mpileup.digit.del $i.mpileup.digit.ins $i.mpileup.digit.rtstop.tmp $i.mpileup.digit sample1.txt $i.mismatch_and_indels.clean $i.mismatch_and_indels $i.mismatches $i.indel_info $i.mpileup.minCOV
+rm $i.info $i.mean_median_quals $i.3moreinfo $i.mpileup.digit.rtstop $i.mpileup.digit.del $i.mpileup.digit.ins $i.mpileup.digit.rtstop.tmp $i.mpileup.digit sample1.txt $i.mismatch_and_indels.clean $i.mismatch_and_indels $i.indel_info $i.mpileup.minCOV $i.mismatches
 
 # Script completed!
 echo "Script completed! Have a nice day! :-)"
