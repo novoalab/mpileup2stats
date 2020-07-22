@@ -12,17 +12,18 @@ This code takes *samtools mpileup format* (generated from a BAM) and extracts pe
 ## What can I use this code for? 
 * It was written for the **RNA modifications in cDNA sequencing data** coming from Illumina RNAseq
 * It can be used also for the analysis of **nanopore cDNA sequencing data**, and will be specially useful if using the CUSTOM protocol (first-strand only), because RT drop-offs will appear 
-* It can also be used for the analysis of **direct RNA sequencing data**, however please consider checking EpiNano in that case, as 5mer information is not given as output here, whereas EpiNano will give you that.
+* It can also be used for the analysis of **direct RNA sequencing data**, however please consider checking EpiNano (https://github.com/enovoa/EpiNano) in that case, as 5mer information is not given as output here, whereas EpiNano will give you that.
 * You might find this code useful to use the RT drop-off to predict isoforms from dRNAseq data, based on where you observe a big drop of coverage along your transcripts (not tested)
 
 ## Dependencies
 Uses third-party code (e.g. pileup2base) to extract some of its features 
 
 ## Whats the difference between mpileup2stats and HAMR?
-It does pretty much what HAMR did, but with some additional info (RT drop off and indels.
-Also this code does not compute pvalues, whereas HAMR does. 
-
-This code is MUCH MORE EFFICIENT than HAMR and takes MUCH LESS TIME to compute, and requires much FEWER RESOURCES. That's why I wrote, it, because HAMR kept failing all the time due to memory issues. 
+It does pretty much what HAMR does, but with the following differences:
+- mpileup2stats includes some additional information, e.g. RT drop off and indels.
+- mpileup2stats does *not* compute pvalues, whereas HAMR does. 
+- mpileup2stats requires MUCH LESS TIME to compute than HAMR
+- mpileup2stats requires requires much FEWER RESOURCES than HAMR
 
 ##  Whats the difference between mpileup2stats and EpiNano?
 
