@@ -1,5 +1,10 @@
 # mpileup2stats 
 
+Software for the identification of RNA modifications that affect the Watson-Crick base pairing from RNAseq datasets (m3C, m1A, m22G, etc).
+
+Please note that the "footprints" of RNA modifications in RNAseq datasets will vary depending on the reverse transcriptase enzyme used in your analysis. 
+(see for example: [Novoa*; Beaudoin* et al., bioRxiv 2020](https://www.biorxiv.org/content/10.1101/176883v2.full.pdf) for comparative analysis of mismatch signatures using SS3 vs TGIRT).
+
 This code takes *samtools mpileup format* (generated from a BAM) and extracts per-site information, specifically: 
 * mismatches (with proportion of bases: A,C,G,T), in addition to the mismatch frequency
 * insertions
