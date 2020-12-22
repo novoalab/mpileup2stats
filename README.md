@@ -48,9 +48,8 @@ This code is better suited for the analysis of RNA modifications in cDNA dataset
 
 If you are analyzing direct RNA nanopore sequencing data, EpiNano typically be a better choice. 
 
-## Disclaimers
-I believe that if it has a part of the gene without coverage, it may fail. 
-Please let me know if this is the case (Eva)
+## Issues/doubts
+Please open a GitHub issue if you have any doubts/questions/concerns. Thanks!
 
 ## Author
 Written by Eva Novoa (2017). 
