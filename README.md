@@ -22,14 +22,14 @@ Uses third-party code (e.g. pileup2base) to extract some of its features
 It does pretty much what HAMR does, but with the following differences:
 - mpileup2stats includes some additional information, e.g. RT drop off and indels.
 - mpileup2stats does *not* compute pvalues, whereas HAMR does. 
-- mpileup2stats requires MUCH LESS TIME to compute than HAMR
-- mpileup2stats requires requires much FEWER RESOURCES than HAMR
+- mpileup2stats requires less time to compute than HAMR
+- mpileup2stats requires requires fewer resources (CPU time and memory) than HAMR
 
 ##  Whats the difference between mpileup2stats and EpiNano?
 
 ### 1) Per-site vs per-read
 - EpiNano computes per-read statistics and then per-site, using the per-read files.
-- This software computes per-site stats directly from samtools mpileup.
+- This software computes per-site stats directly from samtools mpileup. 
 
 ### 2) 5mer vs 1mer
 - This software will not provide output per 5mer, whereas EpiNano reports both 1mer (per-site) and 5mer
@@ -40,8 +40,6 @@ It does pretty much what HAMR does, but with the following differences:
 ### 4) Relative mismatch frequency
 - This code will tell you the relative frequency of A:C:G:T at each site (not just the global mismatch frequency),which is important to identify the underlying RNA modification identity, as these seem to cause different "error signatures". EpiNano doesn't give this info. 
 - This feature is also important for comparing different RT enzymes, they tend to change their relative misincorporation rates, in an RNA modification-dependent manner.
-
-So: mismatch signatures depend BOTH on RT enzyme and RNA modification. Take that into account! :-)
 
 ## When to use EpiNano or this code?
 This code is better suited for the analysis of RNA modifications in cDNA datasets, where the per-read information is more irrelevant. Also, this code provides information both on mismatches as well as on RT drop-offs. 
