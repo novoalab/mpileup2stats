@@ -49,6 +49,7 @@ It does pretty much what HAMR does, but with the following differences:
 ### 4) Relative mismatch frequency
 - This code will tell you the relative frequency of A:C:G:T at each site (not just the global mismatch frequency),which is important to identify the underlying RNA modification identity, as these seem to cause different "error signatures". EpiNano doesn't give this info. 
 - This feature is also important for comparing different RT enzymes, they tend to change their relative misincorporation rates, in an RNA modification-dependent manner.
+- Update 2021: EpiNano_RMS.py version now does give you this info - please see [NanoRMS](https://github.com/novoalab/nanoRMS/tree/master/epinano_RMS) Github Repo. 
 
 ## When to use EpiNano or this code?
 This code is better suited for the analysis of RNA modifications in cDNA datasets, where the per-read information is more irrelevant. Also, this code provides information both on mismatches as well as on RT drop-offs. 
